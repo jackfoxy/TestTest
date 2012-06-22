@@ -22,7 +22,7 @@ System.MissingMethodException: Method not found:
 
 Result StackTrace:
 	
-at TestTest.FSharpxDList.dlFold@9-1.Invoke(DList`1 l)
+at TestTest.FSharpxDList.dlFold\@9-1.Invoke(DList`1 l)
 
    at TestTest.utility.getTime[a](FSharpFunc`2 f, a data) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark\Infrastructure.fs:line 33
 
@@ -30,9 +30,9 @@ at TestTest.FSharpxDList.dlFold@9-1.Invoke(DList`1 l)
 
    at TestTest.Benchmark.getTimeDList(BenchArgs inputArgs) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark\Benchmark.fs:line 12
 
-   at <StartupCode$DS_Benchmark-Tests>.$Tests.FSharpxDList iterate@14.Invoke(BenchArgs inputArgs) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 14
+   at <StartupCode$DS_Benchmark-Tests>.$Tests.FSharpxDList iterate\@14.Invoke(BenchArgs inputArgs) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 14
 
-   at TestTest.TestUtil.dsGetTimeTest[a,b](FSharpFunc`2 f, String initData, a typeDs, b typeData) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\TestUtil.fs:line 20
+   at TestTest.TestUtil.dsGetTimeTest\[a,b](FSharpFunc`2 f, String initData, a typeDs, b typeData) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\TestUtil.fs:line 20
 
    at TestTest.FSharpxDListTest.FSharpxDList iterate() in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 14
 
