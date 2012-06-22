@@ -24,9 +24,9 @@ Result StackTrace:
 	
 at TestTest.FSharpxDList.dlFold\@9-1.Invoke(DList`1 l)
 
-   at TestTest.utility.getTime[a](FSharpFunc`2 f, a data) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark\Infrastructure.fs:line 33
+   at TestTest.utility.getTime\[a](FSharpFunc`2 f, a data) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark\Infrastructure.fs:line 33
 
-   at TestTest.FSharpxDList.getTime[a,a](BenchArgs inputArgs, a data) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark\GetTime.fs:line 12
+   at TestTest.FSharpxDList.getTime\[a,a](BenchArgs inputArgs, a data) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark\GetTime.fs:line 12
 
    at TestTest.Benchmark.getTimeDList(BenchArgs inputArgs) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark\Benchmark.fs:line 12
 
