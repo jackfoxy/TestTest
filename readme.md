@@ -25,7 +25,7 @@ Result StackTrace:
 
 at TestTest.Benchmark.getTimeDList(BenchArgs inputArgs)
 
-   at <StartupCode$DS_Benchmark-Tests>.$Tests.FSharpxDList iterate@23.Invoke(BenchArgs inputArgs) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 23
+   at <StartupCode$DS_Benchmark-Tests>.$Tests.FSharpxDList iterate\@23.Invoke(BenchArgs inputArgs) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 23
    
    at TestTest.FSharpxDListTest.dsGetTimeTest(FSharpFunc`2 f, String initData) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 12
    
