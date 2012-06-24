@@ -13,7 +13,7 @@
                                        Action = "";
                                     AddlParms = Array.create 5 "";}
 
-            printfn "%i\t%s\t%s\t%i" result.Ticks (result.DataStructureType.ToString()) (result.DataType.ToString()) result.Result
+            printfn "%i\t%i" result.Ticks result.Result
 
             printfn " "
 
@@ -23,7 +23,7 @@
                                        Action = "";
                                     AddlParms = Array.create 5 "";}
 
-            printfn "%i\t%s\t%s\t%i" result2.Ticks (result.DataStructureType.ToString()) (result.DataType.ToString()) result.Result
+            printfn "%i\t%i" result2.Ticks result.Result
 
             printfn "Ready."
             System.Console.ReadKey() |> ignore

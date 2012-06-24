@@ -9,9 +9,33 @@
     module Benchmark =
 
         let getTimeDList (inputArgs:BenchArgs) =
-            FSharpxDList.getTime inputArgs (InitDataCol.arrayIntAsc inputArgs.Size)
+            
+            let dl = DList.ofSeq (InitDataCol.arrayIntAsc inputArgs.Size)
+
+            let sw = new Stopwatch()
+            sw.Start()
+ 
+            let x = DList.fold (fun i b -> i + 1) 0 dl
+            
+            sw.Stop()
+
+            {         Ticks = sw.ElapsedTicks;
+               Milliseconds = sw.ElapsedMilliseconds;
+                     Result = x;}
 
         let getTimeCoreList (inputArgs:BenchArgs) =
-            CoreList.getTime inputArgs (InitDataCol.arrayIntAsc inputArgs.Size)
+           
+            let l = List.ofSeq(InitDataCol.arrayIntAsc inputArgs.Size)
+
+            let sw = new Stopwatch()
+            sw.Start()
+ 
+            let x = List.fold (fun i b -> i + 1) 0 l
+            
+            sw.Stop()
+
+            {         Ticks = sw.ElapsedTicks;
+               Milliseconds = sw.ElapsedMilliseconds;
+                     Result = x;}
 
         
