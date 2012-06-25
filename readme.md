@@ -3,6 +3,9 @@ ConsoleApplication1 -- executes a fold on DList in FSharpx Datastructures and a 
 
 DS_Benchmark.Tests -- executes MsTest on the same two folds. Notice the test on DList fails and the test on List succeeds. MsTest on DList fails with the following error:
 
+#UPDATE 
+Discovered similar problem with PowerPack LazyList.ofList and LazyList when iterating through a rec loop. Demonstration examples added.
+
 Test Name:	FSharpxDList iterate
 
 Test FullName:	TestTest.FSharpxDListTest.FSharpxDList iterate
