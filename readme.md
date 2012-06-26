@@ -1,10 +1,32 @@
+##Problem description
 VS 2012 RC
 ConsoleApplication1 -- executes a fold on DList in FSharpx Datastructures and a fold on List in Fhsarp Core. Notice that both work.
 
 DS_Benchmark.Tests -- executes MsTest on the same two folds. Notice the test on DList fails and the test on List succeeds. MsTest on DList fails with the following error:
 
-#UPDATE 
-Discovered similar problem with PowerPack LazyList.ofList and LazyList when iterating through a rec loop. Demonstration examples added.
+Similar problem with PowerPack LazyList.ofList and LazyList when iterating through a rec loop. Demonstration examples added.
+
+##Unit tests call function with Invoke
+
+decompiled (with dotPeek 1.0 Beta) unit test:
+
+the difference is the unit test calls the function using Microsoft.FSharp.Core.FSharpFunc.Invoke
+
+GetTimeReturn getTimeReturn = f.Invoke(new BenchArgs("", 10, initData, "", ArrayModule.Create<string>(5, "")));
+
+      if (getTimeReturn.Ticks > 0L)
+	  
+        return getTimeReturn.Result > 0;
+		
+      else
+	  
+        return false;
+		
+decompiled console .exe:
+
+GetTimeReturn timeDlist = Benchmark.getTimeDList(new BenchArgs("", 10, InitData.ArrayIntAsc, "", ArrayModule.Create<string>(5, "")));
+
+##Error output
 
 Test Name:	FSharpxDList iterate
 
