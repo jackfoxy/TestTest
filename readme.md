@@ -8,23 +8,15 @@ Similar problem with PowerPack LazyList.ofList and LazyList when iterating throu
 
 ##Unit tests call function with Invoke
 
-<del>decompiled (with dotPeek 1.0 Beta) unit test:
+<del>decompiled (with dotPeek 1.0 Beta) unit test:</del>
 
-the difference is the unit test calls the function using Microsoft.FSharp.Core.FSharpFunc.Invoke
+<del>the difference is the unit test calls the function using Microsoft.FSharp.Core.FSharpFunc.Invoke</del>
 
-GetTimeReturn getTimeReturn = f.Invoke(new BenchArgs("", 10, initData, "", ArrayModule.Create<string>(5, "")));
+<del>GetTimeReturn getTimeReturn = f.Invoke(new BenchArgs("", 10, initData, "", ArrayModule.Create<string>(5, "")));</del>
 
-      if (getTimeReturn.Ticks > 0L)
-	  
-        return getTimeReturn.Result > 0;
-		
-      else
-	  
-        return false;
-		
-decompiled console .exe:
+<del>decompiled console .exe:</del>
 
-GetTimeReturn timeDlist = Benchmark.getTimeDList(new BenchArgs("", 10, InitData.ArrayIntAsc, "", ArrayModule.Create<string>(5, "")));</del>
+<del>GetTimeReturn timeDlist = Benchmark.getTimeDList(new BenchArgs("", 10, InitData.ArrayIntAsc, "", ArrayModule.Create<string>(5, "")));</del>
 
 Did a further simplification to get the code in the unit test to match the code in the console app, eliminating the Invoke, but the problem remained. The issue must involve either Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute or TestClassAttribute.
 
