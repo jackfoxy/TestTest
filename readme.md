@@ -38,14 +38,40 @@ Test method TestTest.FSharpxDListTest.FSharpxDList iterate threw exception:
 
 System.MissingMethodException: Method not found: 
 
-'!!0 FSharpx.DataStructures.DList.fold(Microsoft.FSharp.Core.FSharpFunc`2<!!0,Microsoft.FSharp.Core.FSharpFunc`2<!!1,!!0>>, !!0, FSharpx.DataStructures.DList`1<!!1>)'.
+'!!0 FSharpx.DataStructures.DList.fold(Microsoft.FSharp.Core.FSharpFunc`2&lt;!!0,Microsoft.FSharp.Core.FSharpFunc`2&lt;!!1,!!0>>, !!0, FSharpx.DataStructures.DList`1&lt;!!1>)'.
 
 Result StackTrace:	
 
 at TestTest.Benchmark.getTimeDList(BenchArgs inputArgs)
 
-   at <StartupCode$DS_Benchmark-Tests>.$Tests.FSharpxDList iterate\@23.Invoke(BenchArgs inputArgs) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 23
+   at &lt;StartupCode$DS_Benchmark-Tests>.$Tests.FSharpxDList iterate\@23.Invoke(BenchArgs inputArgs) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 23
    
    at TestTest.FSharpxDListTest.dsGetTimeTest(FSharpFunc`2 f, String initData) in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 12
    
    at TestTest.FSharpxDListTest.FSharpxDList iterate() in C:\Users\Jack\Documents\GitHub\TestTestSolution\TestTest\DS_Benchmark.Tests\Tests.fs:line 23
+   
+##Work Around
+
+c:\Windows\Microsoft.NET\Framework\v4.0.30319\Config\machine.config
+
+remove the existing blank &lt;runtime /> section, and replace it with
+
+<pre>
+&lt;runtime>
+
+    &lt;assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+
+     &lt;dependentAssembly>
+
+         &lt;assemblyIdentity name="FSharp.Core" publicKeyToken="b03f5f7f11d50a3a"
+
+                            culture="neutral"/>
+
+         &lt;bindingRedirect oldVersion="4.0.0.0" newVersion="4.3.0.0"/>
+
+     &lt;/dependentAssembly>
+
+    &lt;/assemblyBinding>
+
+&lt;/runtime>
+</pre>
